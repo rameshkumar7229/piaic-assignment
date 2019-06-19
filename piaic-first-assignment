@@ -1,0 +1,566 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# ## 1. Calculate Area of a Circle
+
+# #### Write a Python program which accepts the radius of a circle from the user and compute the area.
+# ###### Program Console Sample Output 1:
+# ###### Input Radius: 0.5
+# ###### Area of Circle with radius 0.5 is 0.7853981634
+
+# In[14]:
+
+
+def circle(x):
+    area=3.14*x**2
+    print(area)
+
+
+# In[15]:
+
+
+circle(0.5)
+
+
+# In[17]:
+
+
+r=float(input("enter radius"))
+area=3.14*r**2
+print("the area of circle is "+ str(area))
+
+
+# ## 2. Check Number either positive, negative or zero
+
+# #### Write a Python program to check if a number is positive, negative or zero
+# ###### Program Console Sample Output 1:
+# ###### Enter Number: -1
+# ##### Negative Number Entered
+# ###### Program Console Sample Output 2:
+# ##### Integer: 3
+# ##### Positive Number Entered
+# ###### Program Console Sample Output 3:
+# ##### Integer: 0
+# ###### Zero Entered
+
+# In[20]:
+
+
+def num(x):
+    if x>0 :
+        print("its positive")
+    elif x==0:
+        print("its zero")
+    else:
+        print("its negative")
+
+
+# In[21]:
+
+
+num(-1)
+
+
+# In[22]:
+
+
+num(3)
+
+
+# In[23]:
+
+
+num(0)
+
+
+# ## 3. Divisibility Check of two numbers
+
+# #### Write a Python program to check whether a number is completely divisible by another number. Accept two integer values form the user
+# ##### Program Console Sample Output 1:
+# ###### Enter numerator: 4
+# ###### Enter Denominator: 2
+# ##### Number 4 is Completely divisible by 2
+# ###### Program Console Sample Output 2:
+# ##### Enter numerator: 7
+# 
+# ##### Enter Denominator: 4
+# ###### Number 7 is not Completely divisible by 4
+
+# In[27]:
+
+
+def num(x,y):
+    z=x%y
+    if z==0:
+        print(str(x)+ " completly divisable by  "+ str (y))
+    else:
+        print(str(x)+"  not completely by  "+str(y))
+
+
+# In[30]:
+
+
+num(4,2)
+
+
+# In[29]:
+
+
+num(7,4)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# ## 4. Calculate Volume of a sphere
+
+# ##### Write a Python program to get the volume of a sphere, please take the radius as input from user
+
+# ##### Program Console Output:
+# ##### Enter Radius of Sphere: 1
+# ###### Volume of the Sphere with Radius 1 is 4.18
+
+# In[34]:
+
+
+radius=float(input("enter radius of sphere"))
+volume=4/3*3.14*radius**3
+print("Volume of the Sphere with Radius "+str(radius)+' is '+str(volume))
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# ## 5. Copy string n times
+# #### Write a Python program to get a string which is n (non-negative integer) copies of a given string.
+# ##### Program Console Output:
+# ##### Enter String: Hi
+# ###### How many copies of String you need: 4
+# ###### 4 Copies of Hi are HiHiHiHi
+
+# In[37]:
+
+
+def p(item,n):
+    y=item*n
+    print(y)
+
+
+# In[40]:
+
+
+p("Hi",4)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# ## 6. Check if number is Even or Odd
+# ### Write a Python program to find whether a given number (accept from the user) is even or odd, print out an appropriate message to the user
+# #### Program Console Output 1:
+# ##### Enter Number: 4
+# ###### 4 is Even
+# #### Program Console Output 2:
+# ##### Enter Number: 9
+# ###### 9 is Odd
+
+# In[43]:
+
+
+def num(x):
+    if x%2==0:
+        print("number is even")
+    else:
+        print("number is odd")
+        
+
+
+# 
+
+# In[44]:
+
+
+num(4)
+
+
+# 
+
+# In[45]:
+
+
+num(9)
+
+
+# ## 7. Vowel Tester
+# ### Write a Python program to test whether a passed letter is a vowel or not
+# #### Program Console Output 1:
+# ##### Enter a character: A
+# ###### Letter A is Vowel
+# #### Program Console Output 2:
+# ##### Enter a character: e
+# ###### Letter e is Vowel
+# #### Program Console Output 2:
+# ##### Enter a character: N
+# ###### Letter N is not Vowel
+
+# In[75]:
+
+
+def alpha(x):
+    
+    a=["a","e","i","o","u"]
+    A=["A","E","I","O","U"]
+    
+    if x in a or x in A:
+            print("its vovel")
+    else:
+            print("not vovel")
+
+
+# In[76]:
+
+
+alpha("A")
+
+
+# In[77]:
+
+
+alpha("e")
+
+
+# In[78]:
+
+
+alpha("N")
+
+
+# ## 8. Triangle area
+# ### Write a Python program that will accept the base and height of a triangle and compute the area
+# ###### Reference:
+# https://www.mathgoodies.com/lessons/vol1/area_triangle
+
+# In[79]:
+
+
+#A=(height+base)/2
+
+
+def tra(height,base):
+    area=(height+base)/2
+    print("The area of triangle is  "+ str(area))
+
+
+# In[80]:
+
+
+tra(4,6)
+
+
+# In[81]:
+
+
+tra(10,2)
+
+
+# In[ ]:
+
+
+
+
+
+# ## 9. Calculate Interest
+# ### Write a Python program to compute the future value of a specified principal amount, rate of interest, and a number of years
+# #### Program Console Sample 1:
+# ##### Please enter principal amount: 10000
+# ###### Please Enter Rate of interest in %: 0.1
+# ###### Enter number of years for investment: 5
+# ###### After 5 years your principal amount 10000 over an interest rate of 0.1 % will be 16105.1
+
+# In[89]:
+
+
+# future value formula will be used with no computation 
+#fv = pv(1+r)^t
+
+
+principle_amount=(int(input("enter the value")))
+rate_of_interest=(float(input("enter the interest rate")))
+years=(int(input("enter number of years")))
+z=principle_amount*((1+rate_of_interest)**years)
+print(z)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# ## 10. Euclidean distance
+# ### write a Python program to compute the distance between the points (x1, y1) and (x2, y2).
+# #### Program Console Sample 1:
+# ###### Enter Co-ordinate for x1: 2
+# ###### Enter Co-ordinate for x2: 4
+# ###### Enter Co-ordinate for y1: 4
+# ###### Enter Co-ordinate for y2: 4
+# ###### Distance between points (2, 4) and (4, 4) is 2
+
+# ###### Reference:
+# https://en.wikipedia.org/wiki/Euclidean_distance
+
+# In[90]:
+
+
+import math 
+
+
+# In[95]:
+
+
+def distance(x1,x2,y1,y2):
+    z=((y1-x1)+(y2-x2))**2
+    z=math.sqrt(z)
+    
+    print(z)
+    
+
+
+# In[96]:
+
+
+distance(2,4,4,4)
+
+
+# In[ ]:
+
+
+
+
+
+# ## 11. Feet to Centimeter Converter
+# ### Write a Python program to convert height in feet to centimetres.
+# ##### Program Console Sample 1:
+# ###### Enter Height in Feet: 5
+# ###### There are 152.4 Cm in 5 ft
+# ###### Reference:
+# https://www.rapidtables.com/convert/length/feet-to-cm.html
+
+# In[97]:
+
+
+# formula 1=ft=30,48
+# d(cm) = d(ft) × 30.48
+
+
+# In[108]:
+
+
+d=(float(input("enter feet")))
+cm=d*30.48
+print("There are "+ str(cm) + " in  " + str(d)+' ft')
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# ## 12. BMI Calculator
+# ### Write a Python program to calculate body mass index
+# ##### Program Console Sample 1:
+# ###### Enter Height in Cm: 180
+# ###### Enter Weight in Kg: 75
+# ###### Your BMI is 23.15
+
+# In[113]:
+
+
+#bmi=kg/m2 or [weight (kg) / height (cm) / height (cm)] x 10,000
+h=(int(input("enter the height in cm")))
+w=(int(input("enter the weight in kg")))
+bmi =(w/h/h)*10000
+(print("your bmi is  "+str(bmi)))
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# ## 13. Sum of n Positive Integers
+# ### Write a python program to sum of the first n positive integers
+# #### Program Console Sample 1:
+# ###### Enter value of n: 5
+# ###### Sum of n Positive integers till 5 is 15
+
+# In[116]:
+
+
+n = (int(input("Input a number: ")))
+sum_num = (n * (n + 1)) / 2
+print(sum_num)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# ## 14. Digits Sum of a Number
+# ### Write a Python program to calculate the sum of the digits in an integer
+# #### Program Console Sample 1:
+# ##### Enter a number: 15
+# ###### Sum of 1 + 5 is 6
+# #### Program Console Sample 2:
+# ##### Enter a number: 1234
+# ###### Sum of 1 + 2 + 3 + 4 is 10
+
+# In[118]:
+
+
+num = int(input("Input a four digit numbers: "))
+x  = num //1000
+x1 = (num - x*1000)//100
+x2 = (num - x*1000 - x1*100)//10
+x3 = num - x*1000 - x1*100 - x2*10
+print("The sum of digits in the number is", x+x1+x2+x3)
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
